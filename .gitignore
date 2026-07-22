@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+.env*.local
+.DS_Store
+npm-debug.log*
+*.tsbuildinfo
+coverage/
+
+# Rust / Soroban build artifacts
+target/
+contracts/**/target/
+*.wasm
