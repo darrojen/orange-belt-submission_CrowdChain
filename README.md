@@ -220,4 +220,5 @@ Screenshot the Actions tab showing a green run for your submission.
 - [ ] Screenshot: mobile responsive UI (resize your browser or use dev tools' device toolbar)
 - [ ] Screenshot: CI/CD pipeline running green in the Actions tab
 - [ ] Screenshot: test output showing 3+ passing tests (`cargo test` and/or `npm test`)
-- [ ] Demo video (1–2 minutes): connect wallet → create campaign → contribute → show live activity feed updating → claim
+
+![Demo video](/screen_vid.mp4)
