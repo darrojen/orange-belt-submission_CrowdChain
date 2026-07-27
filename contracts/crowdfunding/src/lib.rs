@@ -1,5 +1,6 @@
 #![no_std]
-use registry_contract::RegistryContractClient;
+mod registry_client;
+use registry_client::Client as RegistryContractClient;
 use soroban_sdk::{contract, contracterror, contractimpl, contracttype, symbol_short, Address, Env, Symbol};
 
 /// Core campaign record. Amounts are tracked as plain i128 ledger entries

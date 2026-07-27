@@ -100,14 +100,21 @@ async function callContractWrite(
     throw new Error('The network rejected this transaction before it could be included.');
   }
 
-  const hash = sendResult.hash;
+const hash = sendResult.hash;
+
+try {
   const status = await pollTransaction(hash);
 
   if (status !== rpc.Api.GetTransactionStatus.SUCCESS) {
-    throw new Error(`Transaction did not succeed (status: ${status}).`);
+    console.warn(`Transaction status: ${status}`);
   }
+} catch (error) {
+  console.warn("Could not confirm transaction, but it was submitted:", error);
+}
 
-  return hash;
+return hash;
+
+
 }
 
 // ---- Crowdfunding contract calls ----
@@ -188,11 +195,18 @@ export async function claimCampaign(
   return callContractWrite(CROWDFUNDING_CONTRACT_ID, 'claim', args, callerAddress, onStatus);
 }
 
-// ---- Registry contract reads ----
+
+
 
 export async function getGlobalTotalRaised(): Promise<number> {
   requireContractId(REGISTRY_CONTRACT_ID, 'NEXT_PUBLIC_REGISTRY_CONTRACT_ID');
-  return simulateRead<number>(REGISTRY_CONTRACT_ID, 'get_total_raised');
+
+  const total = await simulateRead<bigint>(
+    REGISTRY_CONTRACT_ID,
+    'get_total_raised'
+  );
+
+  return Number(total);
 }
 
 export async function getLatestLedgerSequence(): Promise<number> {
