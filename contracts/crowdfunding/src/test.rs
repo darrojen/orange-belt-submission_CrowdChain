@@ -1,7 +1,6 @@
 #![cfg(test)]
 
 use super::*;
-use crate::registry_client::Contract as RegistryContract;
 use soroban_sdk::testutils::{Address as _, Ledger};
 
 struct TestSetup {
@@ -15,8 +14,7 @@ fn setup() -> TestSetup {
     env.mock_all_auths();
 
     let crowdfunding_id = env.register(CrowdfundingContract, ());
-    let registry_id = env.register(RegistryContract, ());
-
+    let registry_id = env.register(registry_client::WASM, ());
     let crowdfunding = CrowdfundingContractClient::new(&env, &crowdfunding_id);
     let registry = RegistryContractClient::new(&env, &registry_id);
 
