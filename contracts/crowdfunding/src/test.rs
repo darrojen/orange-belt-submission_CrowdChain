@@ -1,7 +1,7 @@
 #![cfg(test)]
 
 use super::*;
-use registry_contract::RegistryContract;
+use crate::registry_client::Contract as RegistryContract;
 use soroban_sdk::testutils::{Address as _, Ledger};
 
 struct TestSetup {
