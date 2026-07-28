@@ -1,5 +1,5 @@
 pub const WASM: &[u8] = soroban_sdk::contractfile!(
-    file = "..\\..\\target\\wasm32v1-none\\release\\registry_contract.wasm",
+    file = "../../target/wasm32v1-none/release/registry_contract.wasm",
     sha256 = "118a7949eaedb054782ba5b65ae1b1a39d30e5548dec919d2df303ee9efa51e6"
 );
 
