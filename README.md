@@ -207,13 +207,6 @@ This version tracks contribution and goal amounts as plain ledger bookkeeping (a
 - **Contracts job:** `cargo test --workspace`, then builds the release Wasm and uploads it as a build artifact
 - **Frontend job:** `next lint`, `tsc --noEmit`, `npm test` (Vitest), then `next build`
 
-Screenshot the Actions tab showing a green run for your submission.
-
-## Submission checklist
-
-- [ ] Public GitHub repository (push this project, keep the commit history)
-- [ ] This README, filled in with your contract IDs, tx hash, live demo link, and video link
-- [ ] 10+ meaningful commits (this repo ships with an initial history — keep committing as you deploy/customize)
 - [ ] Live demo link (Vercel/Netlify)
 - [ ] Contract deployment addresses (both contracts)
 - [ ] Transaction hash for a real contract interaction
