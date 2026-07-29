@@ -207,7 +207,7 @@ This version tracks contribution and goal amounts as plain ledger bookkeeping (a
 - **Contracts job:** `cargo test --workspace`, then builds the release Wasm and uploads it as a build artifact
 - **Frontend job:** `next lint`, `tsc --noEmit`, `npm test` (Vitest), then `next build`
 
-**Live demo:** [https://crowdchain.vercel.app](https://crowdchain.vercel.app)
+**Live demo:** [https://crowdchain.vercel.app](https://stellar-crowd-chain.vercel.app/)
 
 ![Demo video](./docs/screenshots/screen_vid.mp4)
 
