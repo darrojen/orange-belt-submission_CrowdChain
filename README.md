@@ -4,8 +4,9 @@ An on-chain crowdfunding dApp for the Rise Stellar Hackathon — Level 3 (Orange
 
 Create a campaign, fund it in small contributions from any supported wallet, and watch a second, independent contract track cross-campaign totals in real time — a genuine two-contract system, not a single contract wearing two hats.
 
-> **Live demo:** _add your Vercel/Netlify URL here after deploying_
-> **Demo video:** _add your 1–2 minute walkthrough link here_
+**Live demo:** [https://stellar-crowd-chain.vercel.app](https://stellar-crowd-chain.vercel.app/)
+**Demo video:** [Watch the walkthrough](https://drive.google.com/file/d/1UUNckzifsE-1t6Mfjy03FnD-tHk6w0Qe/view?usp=sharing)
+
 
 ## Architecture
 
@@ -207,9 +208,7 @@ This version tracks contribution and goal amounts as plain ledger bookkeeping (a
 - **Contracts job:** `cargo test --workspace`, then builds the release Wasm and uploads it as a build artifact
 - **Frontend job:** `next lint`, `tsc --noEmit`, `npm test` (Vitest), then `next build`
 
-**Live demo:** [https://crowdchain.vercel.app](https://stellar-crowd-chain.vercel.app/)
 
-![Demo video](./docs/screenshots/screen_vid.mp4)
 
 ![Responsive UI](./docs/screenshots/responsive_ui.jpg)
 ![CI/CD pipeline passing](./docs/screenshots/ci-passing.jpg)
