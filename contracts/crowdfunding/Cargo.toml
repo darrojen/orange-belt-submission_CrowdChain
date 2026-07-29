@@ -20,3 +20,6 @@ debug = 0
 panic = "abort"
 codegen-units = 1
 lto = true
+
+[build-dependencies]
+sha2 = "0.10"

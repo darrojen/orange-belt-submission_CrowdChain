@@ -123,9 +123,9 @@ stellar contract invoke --id CROWDFUNDING_ID --source deployer --network testnet
 
 Record the resulting IDs and a sample transaction hash (e.g. from creating a test campaign) for your submission:
 
-- **Registry contract:** `REGISTRY_ID` — _paste here_
-- **Crowdfunding contract:** `CROWDFUNDING_ID` — _paste here_
-- **Sample transaction hash:** _paste here (e.g. from `create_campaign` or `contribute`)_
+- **Registry contract:** `CBOBAC6FBZKULGSUP5634VCU54R2D23S7J6HLXF65PGKR6MYW3QCGE4Y`
+- **Crowdfunding contract:** `CDUOJS4KS5J3L3XAYTNDZ4C22TFSYHRCC4GII3CIYT5XYFJRW3I52ZBG`
+- **Sample transaction hash:** `https://stellar.expert/explorer/testnet/tx/307558b907e31b3ef6540ae94df312b4e1ee4ede048ab9d60a485ed61ce3b17b`
 
 ## 2. Configure the frontend
 
@@ -207,11 +207,10 @@ This version tracks contribution and goal amounts as plain ledger bookkeeping (a
 - **Contracts job:** `cargo test --workspace`, then builds the release Wasm and uploads it as a build artifact
 - **Frontend job:** `next lint`, `tsc --noEmit`, `npm test` (Vitest), then `next build`
 
-- [ ] Live demo link (Vercel/Netlify)
-- [ ] Contract deployment addresses (both contracts)
-- [ ] Transaction hash for a real contract interaction
-- [ ] Screenshot: mobile responsive UI (resize your browser or use dev tools' device toolbar)
-- [ ] Screenshot: CI/CD pipeline running green in the Actions tab
-- [ ] Screenshot: test output showing 3+ passing tests (`cargo test` and/or `npm test`)
+**Live demo:** [https://crowdchain.vercel.app](https://crowdchain.vercel.app)
 
-![Demo video](/screen_vid.mp4)
+![Demo video](./docs/screenshots/screen_vid.mp4)
+
+![Responsive UI](./docs/screenshots/responsive_ui.jpg)
+![CI/CD pipeline passing](./docs/screenshots/ci-passing.jpg)
+![Test output passing](./docs/screenshots/passing-tests.jpg)
